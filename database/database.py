@@ -4,4 +4,5 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-db = PostgresqlDatabase(os.getenv('DATABASE_URI',''))
+database_uri = os.getenv('DATABASE_URI','')
+db = PostgresqlDatabase(database_uri)
